@@ -2,5 +2,26 @@
   "dependencies": {
     "express": "^4.18.1",
     "react": "^18.1.0"
-  }
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  },
+  "name": "lose-to-gain",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Web app for Lose to Gain.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmislam1/lose-to-gain.git"
+  },
+  "author": "Sajedur Rahman.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmislam1/lose-to-gain/issues"
+  },
+  "homepage": "https://github.com/mmislam1/lose-to-gain#readme"
 }
