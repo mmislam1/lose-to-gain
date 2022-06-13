@@ -6,8 +6,34 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+#root{
+  width:100%;
+  --w: rgba(255,255,255,1.0);
+  --ltg: rgb(0, 186, 59);
+  --red: rgba(255,0,0,1.0);
+  --blue: rgb(39, 0, 214);
+  --green: rgb(1, 150, 18);
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+.pieChartBox{
+  height: 30%;
+  max-height: 100px;
+  width: 30%;
+  
+}
+
+.pieChart{
+  border-radius: 50%;
+
+}
+
+.pieChartInnerCircle{
+  background-color: var(--w);
+  border-radius: 50%;
 }
