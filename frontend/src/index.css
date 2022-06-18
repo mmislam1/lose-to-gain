@@ -10,30 +10,33 @@ body {
   width:100%;
   --w: rgba(255,255,255,1.0);
   --ltg: rgb(0, 186, 59);
-  --red: rgba(255,0,0,1.0);
-  --blue: rgb(39, 0, 214);
+  --red: rgb(255, 6, 6);
+  --blue: rgb(69, 27, 255);
   --green: rgb(1, 150, 18);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 
 .pieChartBox{
+  display: flex;
   height: 30%;
   max-height: 100px;
   width: 30%;
-  
+  align-items: center;
+  justify-content: center;
 }
 
 .pieChart{
+  display: flex;
   border-radius: 50%;
-
+  align-items: center;
+  justify-content: center;
 }
 
 .pieChartInnerCircle{
+  display: flex;
   background-color: var(--w);
   border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+
 }
