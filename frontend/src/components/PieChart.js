@@ -1,10 +1,12 @@
-import React from 'react'
-import{ useState}  from 'react'
+import React,{useState,useEffect} from 'react'
 
 
-const PieChart = () => {
+
+const PieChart = (prop) => {
   
   const [colors, setColors]=useState({redFrom: "0", redTo:"20",greenFrom : "20", greenTo: "70", blueFrom: "70", blueTo: "100"})
+
+
 
   return (
     <div className="pieChartBox">
