@@ -1,12 +1,13 @@
 import React from "react";
-import PieChart from "./components/PieChart.js";
+import PieChart from "./components/PieChart/PieChart.js";
 import "./index.css";
-import{useState} from 'react'
+import { useState } from 'react'
 import InputFields from "./testComponents/InputFields.js";
+import AddFood from "./components/AddFood/AddFood.js";
 
 
 function App() {
-  
+
 
 
 
@@ -15,7 +16,9 @@ function App() {
       <PieChart ></PieChart>
 
       <InputFields></InputFields>
-      
+
+      <AddFood></AddFood>
+
     </div>
   );
 }
