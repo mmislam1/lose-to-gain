@@ -11,12 +11,14 @@ const initialState = {
         trget: 500,
         burnt: 200,
     },
+    foodItems: [],
 
 }
 
 
 const reducer = combineReducers({
     input: inputReducer,
+    foodItems: foodItemsReducer,
 })
 
 
