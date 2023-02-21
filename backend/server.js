@@ -2,6 +2,7 @@ import express from "express";
 import mongoose from 'mongoose'
 import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js'
+import foodRouter from "./routers/foodRouter.js";
 
 dotenv.config();
 const app = express()
@@ -12,11 +13,11 @@ const conn = process.env.DATABASE_URL
 
 mongoose.connect(conn)
 
-const database = mongoose.connection
 
 // routers ...
 
 app.use('/api/users', userRouter)
+app.use('/api/foods', foodRouter)
 
 
 
