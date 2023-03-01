@@ -1,6 +1,6 @@
 import express from 'express'
 import expressAsyncHandler from 'express-async-handler'
-import { isAdmin } from '../misc.js'
+import { isAdmin, isAuth } from '../misc.js'
 import Food from '../models/foodModel.js'
 
 
@@ -19,7 +19,7 @@ foodRouter.get('/', expressAsyncHandler(async (req, res) => {
 
 }))
 
-foodRouter.post('/addfood', isAdmin, expressAsyncHandler(async (req, res) => {
+foodRouter.post('/addfood', isAuth, isAdmin, expressAsyncHandler(async (req, res) => {
 
     const food = new Food({
         name: req.body.name,
