@@ -132,10 +132,7 @@ const foodSchema = new mongoose.Schema({
         type: Number,
         required: true, default: 0,
     },
-    selected: {
-        type: Number,
-        required: true, default: 0,
-    },
+
 
 
 })
