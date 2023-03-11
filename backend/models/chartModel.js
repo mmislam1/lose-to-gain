@@ -1,7 +1,7 @@
 import mongoose from 'mongoose'
 
 
-const orderSchema = new mongoose.Schema({
+const chartSchema = new mongoose.Schema({
     userId: {
 
         type: Schema.Types.ObjectID,
@@ -36,4 +36,4 @@ const orderSchema = new mongoose.Schema({
 })
 
 
-export default Order = mongoose.model('Order', orderModel)
+export default Chart = mongoose.model('Chart', chartModel)
