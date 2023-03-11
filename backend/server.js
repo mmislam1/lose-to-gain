@@ -2,7 +2,8 @@ import express from "express";
 import mongoose from 'mongoose'
 import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js'
-import foodRouter from "./routers/foodRouter.js";
+import foodRouter from "./routers/foodRouter.js"
+import chartRouter from './routers/chartRouter'
 
 dotenv.config();
 const app = express()
@@ -18,6 +19,7 @@ mongoose.connect(conn)
 
 app.use('/api/users', userRouter)
 app.use('/api/foods', foodRouter)
+app.use('/api/chart', chartRouter)
 
 
 
