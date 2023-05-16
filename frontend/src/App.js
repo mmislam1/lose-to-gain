@@ -1,7 +1,6 @@
 import React from "react";
 import PieChart from "./components/PieChart/PieChart.js";
 import "./index.css";
-import { useState } from 'react'
 import InputFields from "./testComponents/InputFields.js";
 import AddFood from "./components/AddFood/AddFood.js";
 

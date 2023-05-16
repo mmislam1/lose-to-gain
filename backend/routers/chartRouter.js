@@ -9,8 +9,9 @@ const chartRouter = express.Router()
 
 chartRouter.post('/createChart', isAuth, expressAsyncHandler(async (req, res) => {
 
-
+    //diet chart to be created...
 
 
 }))
 
+export default chartRouter

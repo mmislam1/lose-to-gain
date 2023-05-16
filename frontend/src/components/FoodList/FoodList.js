@@ -6,6 +6,8 @@ const FoodList = () => {
   const foodItems = useSelector(state => state.foodItems)
 
 
+
+
   return (
     <div>FoodList</div>
   )

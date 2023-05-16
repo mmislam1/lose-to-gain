@@ -1,6 +1,7 @@
 import { createStore, configureStore, compose, applyMiddleware, combineReducers } from 'redux'
 import { inputReducer } from './reducers/inputReducers/inputReducer'
 
+
 import thunk from 'redux-thunk'
 
 const initialState = {
@@ -11,7 +12,7 @@ const initialState = {
         trget: 500,
         burnt: 200,
     },
-    foodItems: [],
+
 
 }
 
