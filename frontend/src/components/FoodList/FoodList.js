@@ -9,7 +9,14 @@ const FoodList = () => {
 
 
   return (
-    <div>FoodList</div>
+    <div className='foodListContainer'>
+      <div className='foodList'>
+        {
+          foodItems.map((item)=><div></div>)
+        }
+        
+    </div>
+</div>
   )
 }
 
