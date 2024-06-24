@@ -34,8 +34,8 @@ app.get('/generate-pdf-and-send-email', async (req, res) => {
 
     // Set up email data with unicode symbols
     const mailOptions = {
-        from: 'your-email@example.com',
-        to: 'recipient@example.com',
+        from: 'mmislam272@gmail.com',
+        to: req.emailTo,
         subject: 'Dynamic PDF generated with PDFKit',
         text: 'Please find the attached PDF.',
         attachments: [{
