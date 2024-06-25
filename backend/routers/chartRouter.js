@@ -1,8 +1,8 @@
 import expressAsyncHandler from "express-async-handler";
-import Chart from "../models/chartModel";
+import Chart from "../models/chartModel.js";
 import express from 'express';
-import { isAuth } from "../misc";
-import foodRouter from "./foodRouter";
+import { isAuth } from "../misc.js";
+import foodRouter from "./foodRouter.js";
 
 
 const chartRouter = express.Router()

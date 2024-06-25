@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 import dotenv from 'dotenv';
 import userRouter from './routers/userRouter.js'
 import foodRouter from "./routers/foodRouter.js"
-import chartRouter from './routers/chartRouter'
+import chartRouter from './routers/chartRouter.js'
 
 dotenv.config();
 const app = express()
