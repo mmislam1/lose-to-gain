@@ -14,7 +14,9 @@ const conn = process.env.DATABASE_URL
 
 mongoose.connect(conn)
 
-
+app.get('/', (req, res) => {
+    res.send(`Here it is : ${process.env.nodeailerEmail} `)
+})
 // routers ...
 
 app.use('/api/users', userRouter)
