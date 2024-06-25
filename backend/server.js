@@ -7,16 +7,16 @@ import chartRouter from './routers/chartRouter.js'
 
 dotenv.config();
 const app = express()
-
+app.get('/', (req, res) => {
+    res.send(`Here it is : ${process.env.nodeailerEmail} `)
+})
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const conn = process.env.DATABASE_URL
 
 mongoose.connect(conn)
 
-app.get('/', (req, res) => {
-    res.send(`Here it is : ${process.env.nodeailerEmail} `)
-})
+
 // routers ...
 
 app.use('/api/users', userRouter)
