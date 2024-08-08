@@ -5,7 +5,7 @@ const PDFDocument = require('pdfkit');
 const app = express();
 const port = 3000;
 
-// Set up nodemailer transporter with your email credentials
+
 const transporter = nodemailer.createTransport({
     service: 'gmail', 
     auth: {
@@ -18,8 +18,8 @@ app.get('/pdf-email', async (req, res) => {
     /* Create a new PDF document
     const doc = new PDFDocument();
 
-    // Generate dynamic content
-    const dynamicContent = "Hello, this is a dynamic PDF generated with PDFKit."; */
+    // Generate dynamic content*/
+    const dynamicContent = "Hello, this is a dynamic PDF generated with PDFKit."; 
 
     // Pipe PDF content to a buffer
     const buffer = await new Promise((resolve, reject) => {
