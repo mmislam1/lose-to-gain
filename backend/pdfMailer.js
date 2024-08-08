@@ -7,7 +7,7 @@ const port = 3000;
 
 // Set up nodemailer transporter with your email credentials
 const transporter = nodemailer.createTransport({
-    service: 'gmail', // e.g., 'gmail'
+    service: 'gmail', 
     auth: {
         user: 'your-email@example.com',
         pass: 'your-email-password'
