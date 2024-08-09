@@ -15,10 +15,10 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get('/pdf-email', async (req, res) => {
-    /* Create a new PDF document
+    /* Create a new PDF document*/
     const doc = new PDFDocument();
 
-    // Generate dynamic content*/
+    // Generate dynamic content
     const dynamicContent = "Hello, this is a dynamic PDF generated with PDFKit."; 
 
     // Pipe PDF content to a buffer
