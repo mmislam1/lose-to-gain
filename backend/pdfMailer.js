@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.get('/pdf-email', async (req, res) => {
+app.get('/pdf', async (req, res) => {
     /* Create a new PDF document*/
     const doc = new PDFDocument();
 
