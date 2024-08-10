@@ -9,7 +9,7 @@ const port = 3000;
 const transporter = nodemailer.createTransport({
     service: 'gmail', 
     auth: {
-        user: 'your-email@example.com',
+        user: 'mmislam272@gmail.com',
         pass: 'your-email-password'
     }
 });
