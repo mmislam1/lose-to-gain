@@ -45,6 +45,15 @@ app.get('/pdf', async (req, res) => {
     };
 
     // Send email
+
+    const transporter = nodemailer.createTransport({
+    service: 'gmail', 
+    auth: {
+        user: process.env.nodemailerEmail,
+        pass: process.env.nodemailerPassword
+    }
+    });
+    
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
