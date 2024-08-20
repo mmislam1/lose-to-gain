@@ -6,13 +6,13 @@ const app = express();
 const port = 3000;
 
 
-const transporter = nodemailer.createTransport({
+/*const transporter = nodemailer.createTransport({
     service: 'gmail', 
     auth: {
         user: process.env.nodemailerEmail,
         pass: process.env.nodemailerPassword
     }
-});
+});*/
 
 app.get('/pdf', async (req, res) => {
     /* Create a new PDF document*/
