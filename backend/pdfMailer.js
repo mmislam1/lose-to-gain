@@ -1,6 +1,9 @@
-const express = require('express');
+/*const express = require('express');
 const nodemailer = require('nodemailer');
-const PDFDocument = require('pdfkit');
+const PDFDocument = require('pdfkit');*/
+import express from 'express';
+import nodemailer from 'nodemailer';
+import PDFDocument from 'pdfkit';
 
 const app = express();
 const port = 3000;
