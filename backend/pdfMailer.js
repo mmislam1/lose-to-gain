@@ -5,8 +5,10 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import PDFDocument from 'pdfkit';
 
+/*
 const app = express();
 const port = 3000;
+*/
 
 
 /*const transporter = nodemailer.createTransport({
