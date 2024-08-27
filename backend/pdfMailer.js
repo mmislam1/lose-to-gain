@@ -1,18 +1,23 @@
-const express = require('express');
+/*const express = require('express');
 const nodemailer = require('nodemailer');
-const PDFDocument = require('pdfkit');
+const PDFDocument = require('pdfkit');*/
+import express from 'express';
+import nodemailer from 'nodemailer';
+import PDFDocument from 'pdfkit';
 
+/*
 const app = express();
 const port = 3000;
+*/
 
 
-const transporter = nodemailer.createTransport({
+/*const transporter = nodemailer.createTransport({
     service: 'gmail', 
     auth: {
         user: process.env.nodemailerEmail,
         pass: process.env.nodemailerPassword
     }
-});
+});*/
 
 app.get('/pdf', async (req, res, next) => {
     /* Create a new PDF document*/
@@ -45,6 +50,15 @@ app.get('/pdf', async (req, res, next) => {
     };
 
     // Send email
+
+    const transporter = nodemailer.createTransport({
+    service: 'gmail', 
+    auth: {
+        user: process.env.nodemailerEmail,
+        pass: process.env.nodemailerPassword
+    }
+    });
+    
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
             console.log(error);
