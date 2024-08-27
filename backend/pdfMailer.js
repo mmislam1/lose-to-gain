@@ -14,7 +14,7 @@ const transporter = nodemailer.createTransport({
     }
 });
 
-app.get('/pdf', async (req, res) => {
+app.get('/pdf', async (req, res, next) => {
     /* Create a new PDF document*/
     const doc = new PDFDocument();
 
@@ -56,6 +56,3 @@ app.get('/pdf', async (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-});
