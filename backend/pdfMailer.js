@@ -19,6 +19,26 @@ const port = 3000;
     }
 });*/
 
+const createdPDF = async (req, res, next) => {
+    /* Create a new PDF document*/
+    const doc = new PDFDocument();
+
+    // Generate dynamic content
+    const dynamicContent = "Hello, this is a dynamic PDF generated with PDFKit.";
+
+    // Pipe PDF content to a buffer
+    const buffer = await new Promise((resolve, reject) => {
+        let buffers = [];
+        doc.on('data', buffers.push.bind(buffers));
+        doc.on('end', () => {
+            resolve(Buffer.concat(buffers));
+        });
+        doc.fontSize(12).text(dynamicContent, 50, 50);
+        doc.end();
+    });
+    next()
+}
+
 app.get('/pdf', async (req, res, next) => {
     /* Create a new PDF document*/
     const doc = new PDFDocument();
@@ -36,7 +56,7 @@ app.get('/pdf', async (req, res, next) => {
         doc.fontSize(12).text(dynamicContent, 50, 50);
         doc.end();
     });
-
+    next()
     // Set up email data with unicode symbols
     const mailOptions = {
         from: 'mmislam272@gmail.com',
@@ -68,5 +88,7 @@ app.get('/pdf', async (req, res, next) => {
             res.status(200).send('Email sent successfully');
         }
     });
+
+    
 });
 
