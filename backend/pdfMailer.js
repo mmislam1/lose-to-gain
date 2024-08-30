@@ -19,7 +19,7 @@ const port = 3000;
     }
 });*/
 
-const createdPDF = async (req, res, next) => {
+export const createdPDF = async (req, res, next) => {
     /* Create a new PDF document*/
     const doc = new PDFDocument();
 
