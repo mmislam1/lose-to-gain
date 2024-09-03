@@ -1,20 +1,13 @@
-/*const express = require('express');
-const nodemailer = require('nodemailer');
-const PDFDocument = require('pdfkit');*/
+
 import express from 'express';
 import nodemailer from 'nodemailer';
 import PDFDocument from 'pdfkit';
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> c2956326da175d7fd50aa6035e0ae6842452e7ea
 
-
-/*const transporter = nodemailer.createTransport({
-    service: 'gmail', 
-    auth: {
-        user: process.env.nodemailerEmail,
-        pass: process.env.nodemailerPassword
-    }
-});*/
 
 export const createdPDF = async (req, res, next) => {
     /* Create a new PDF document*/
