@@ -5,10 +5,7 @@ import express from 'express';
 import nodemailer from 'nodemailer';
 import PDFDocument from 'pdfkit';
 
-/*
-const app = express();
-const port = 3000;
-*/
+
 
 
 /*const transporter = nodemailer.createTransport({
@@ -45,8 +42,10 @@ app.get('/pdf', (req, res) => {
     const mailOptions = {
         from: 'mmislam272@gmail.com',
         to: req.emailTo,
-        subject: 'Dynamic PDF generated with PDFKit',
-        text: 'Please find the attached PDF.',
+        subject: 'Diet chart from Lose to Gain.',
+        text: `Hello ${req.name},
+        Thank you for choosing Loose to Gain. Here is the PDF generated from the diet chart yu created. 
+        .`,
         attachments: [{
             filename: 'dynamic_pdf.pdf',
             content: buffer
