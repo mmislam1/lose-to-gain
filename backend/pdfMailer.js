@@ -14,7 +14,7 @@ export const createdPDF = async (req, res, next) => {
     const doc = new PDFDocument();
 
     // Generate dynamic content
-    const dynamicContent = "Hello, this is a dynamic PDF generated with PDFKit.";
+    const dynamicContent = "Hello, this is a dynamic PDF generated with PDFKit for lose to gain.";
 
     // Pipe PDF content to a buffer
     const buffer = await new Promise((resolve, reject) => {
